@@ -1,4 +1,13 @@
 (() => {
+  // Preserve the normal 1440px hero composition on larger displays.
+  const fitHero = () => {
+    const scale = Math.max(1, document.documentElement.clientWidth / 1440);
+    document.documentElement.style.setProperty('--st-hero-scale', String(scale));
+    document.documentElement.style.setProperty('--st-hero-extra', `${927 * (scale - 1)}px`);
+  };
+  fitHero();
+  addEventListener('resize', fitHero, { passive: true });
+
   const init = () => {
     document.querySelectorAll('#main [data-framer-component-type="RichTextContainer"]').forEach(element => {
       const sizes = [element, ...element.querySelectorAll('[style]')].map(node => parseFloat(node.style.getPropertyValue('--framer-font-size')) || 0);

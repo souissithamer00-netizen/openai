@@ -229,28 +229,18 @@
   .framer-3xerR .framer-kfknzn, .framer-3xerR .framer-1xl1t93 { width: 100% !important; max-width: 100% !important; }
 }
 
-/* Explicitly restore the original desktop hero, including ultrawide displays. */
+/* Scale the complete normal-desktop composition, not individual hero pieces. */
 @media (min-width: 1440px) {
-  .framer-3xerR .framer-cwhqqe {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    height: 735px !important;
-    justify-content: center !important;
-    align-items: flex-end !important;
-    gap: 0 !important;
+  .framer-3xerR.framer-72rtr7 {
+    height: calc(12507px + var(--st-hero-extra, 0px)) !important;
   }
-  .framer-3xerR .framer-1ulg27c {
-    width: 670px !important;
-    flex: none !important;
-    height: 733px !important;
-    align-self: auto !important;
-    gap: 42px !important;
+  .framer-3xerR .framer-1lh8rgf {
+    width: 1440px !important;
+    height: 927px !important;
+    transform: scale(var(--st-hero-scale, 1)) !important;
+    transform-origin: top left !important;
   }
-  .framer-3xerR .framer-wumhom {
-    width: 687px !important;
-    height: auto !important;
-    flex: none !important;
+  .framer-3xerR.framer-72rtr7 > div:not(.framer-1lh8rgf) {
+    translate: 0 var(--st-hero-extra, 0px);
   }
 }
