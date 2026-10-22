@@ -229,13 +229,83 @@
   .framer-3xerR .framer-kfknzn, .framer-3xerR .framer-1xl1t93 { width: 100% !important; max-width: 100% !important; }
 }
 
-/* Large screens retain normal desktop sizes and outer padding. */
-@media (min-width: 1600px) {
-  .framer-3xerR .framer-cwhqqe {
-    width: calc(100% - 80px) !important;
-    max-width: none !important;
-    margin-inline: auto !important;
-    justify-content: space-between !important;
-    gap: 0 !important;
+
+/* The opening hero occupies exactly one screen, with generous fluid gutters. */
+.framer-3xerR .framer-1lh8rgf {
+  box-sizing: border-box !important;
+  height: 100svh !important;
+  min-height: 0 !important;
+  padding: clamp(20px, 4svh, 48px) clamp(24px, 7vw, 200px) !important;
+  gap: clamp(16px, 3svh, 36px) !important;
+  justify-content: flex-start !important;
+}
+.framer-3xerR .framer-112zrjh { flex: none !important; max-width: 100% !important; }
+.framer-3xerR .framer-cwhqqe {
+  width: 100% !important; max-width: 1600px !important; margin: 0 auto !important;
+  height: auto !important; flex: 1 1 0 !important; min-height: 0 !important;
+  padding: 0 !important; display: flex !important; flex-direction: row !important;
+  justify-content: space-between !important; align-items: center !important; gap: 32px !important;
+}
+.framer-3xerR .framer-1ulg27c {
+  width: min(49%, 670px) !important; height: auto !important;
+  flex: none !important; gap: 24px !important; zoom: var(--st-hero-fit, 1);
+}
+.framer-3xerR .framer-wumhom {
+  width: min(47%, 687px) !important; height: auto !important;
+  aspect-ratio: 1.16698 !important; flex: none !important; zoom: var(--st-hero-fit, 1);
+}
+.framer-3xerR .framer-szxuak, .framer-3xerR .framer-dnpdey { height: auto !important; gap: 18px !important; }
+.framer-3xerR .framer-nv956p { width: 100% !important; height: auto !important; }
+.framer-3xerR .framer-nv956p .framer-text,
+.framer-3xerR .framer-nv956p .framer-text span { font-size: clamp(42px, 5.2vw, 88px) !important; line-height: 1.02 !important; }
+.framer-3xerR .framer-1cbxj9f { width: 100% !important; align-items: center !important; gap: 12px !important; }
+.framer-3xerR .framer-oi6t0c, .framer-3xerR .framer-zvl913,
+.framer-3xerR .framer-9j6nom { width: auto !important; height: auto !important; }
+.framer-3xerR .framer-oi6t0c .framer-text,
+.framer-3xerR .framer-9j6nom .framer-text { white-space: nowrap !important; }
+.framer-3xerR .framer-dnpdey, .framer-3xerR .framer-kfknzn,
+.framer-3xerR .framer-1xl1t93, .framer-3xerR .framer-1daktyo { width: 100% !important; max-width: 100% !important; }
+.framer-3xerR .framer-1yg884c { width: 100% !important; gap: 12px !important; }
+.framer-3xerR .framer-ef8jy7, .framer-3xerR .framer-f7skhu {
+  flex: 1 1 0 !important; min-width: 0 !important; height: auto !important; padding: 18px 16px !important;
+}
+.framer-3xerR .framer-pq5qv0, .framer-3xerR .framer-tcfgis { width: 100% !important; }
+.framer-3xerR .framer-1yg884c .framer-text { font-size: clamp(14px, 1.2vw, 20px) !important; }
+@media (min-width: 1440px) {
+  .framer-3xerR.framer-72rtr7 { height: calc(12507px + 100svh - 927px) !important; }
+  .framer-3xerR.framer-72rtr7 > div:not(.framer-1lh8rgf) { translate: 0 calc(100svh - 927px); }
+}
+@media (max-width: 700px) {
+  .framer-3xerR .framer-1lh8rgf { padding: 20px 28px !important; gap: 20px !important; }
+  .framer-3xerR .framer-cwhqqe { flex-direction: column !important; justify-content: center !important; gap: 18px !important; }
+  .framer-3xerR .framer-1ulg27c { width: 100% !important; gap: 16px !important; }
+  .framer-3xerR .framer-wumhom { width: 260px !important; height: clamp(100px, 22svh, 210px) !important; }
+  .framer-3xerR .framer-nv956p .framer-text,
+  .framer-3xerR .framer-nv956p .framer-text span { font-size: clamp(32px, 8vw, 46px) !important; }
+  .framer-3xerR .framer-szxuak { gap: 12px !important; }
+  .framer-3xerR .framer-12dyexm { gap: 8px 14px !important; }
+  .framer-3xerR .framer-1yg884c { flex-direction: row !important; flex-wrap: nowrap !important; }
+  .framer-3xerR .framer-1yg884c > div { width: auto !important; }
+  .framer-3xerR .framer-1daktyo .framer-text,
+  .framer-3xerR .framer-1b9sie3 .framer-text { font-size: 14px !important; }
+  .framer-3xerR .framer-1b9sie3 { gap: 12px !important; }
+}
+.framer-3xerR .framer-1xzwy28 {
+  position: absolute !important; inset: 0 !important;
+  width: 100% !important; height: 100% !important; aspect-ratio: auto !important;
+  pointer-events: none;
+}
+.st-menu-toggle { display: none; }
+@media (max-width: 900px) {
+  .framer-3xerR .framer-112zrjh { flex-flow: row nowrap !important; justify-content: space-between !important; padding: 10px 12px !important; z-index: 10; }
+  .st-menu-toggle { display: block; border: 1px solid #008484; color: #008484; background: white; border-radius: 8px; padding: 9px 12px; font: 600 14px sans-serif; cursor: pointer; }
+  .st-menu-toggle:focus-visible { outline: 2px solid #008484; outline-offset: 3px; }
+  .framer-3xerR .framer-16crtai { display: none !important; }
+  .framer-3xerR .st-nav-open .framer-16crtai {
+    display: flex !important; position: absolute !important; top: calc(100% + 8px) !important;
+    left: 0 !important; right: 0 !important; width: 100% !important;
+    background: white; border-radius: 12px; padding: 20px; z-index: 20;
+    box-shadow: 0 12px 28px rgba(0,0,0,.16);
   }
+  .framer-3xerR .framer-12dyexm { flex-wrap: wrap !important; width: 100% !important; gap: 16px !important; }
 }
