@@ -228,3 +228,29 @@
 @media (max-width: 1439px) {
   .framer-3xerR .framer-kfknzn, .framer-3xerR .framer-1xl1t93 { width: 100% !important; max-width: 100% !important; }
 }
+
+/* Explicitly restore the original desktop hero, including ultrawide displays. */
+@media (min-width: 1440px) {
+  .framer-3xerR .framer-cwhqqe {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 735px !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    gap: 0 !important;
+  }
+  .framer-3xerR .framer-1ulg27c {
+    width: 670px !important;
+    flex: none !important;
+    height: 733px !important;
+    align-self: auto !important;
+    gap: 42px !important;
+  }
+  .framer-3xerR .framer-wumhom {
+    width: 687px !important;
+    height: auto !important;
+    flex: none !important;
+  }
+}
