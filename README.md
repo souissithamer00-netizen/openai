@@ -30,10 +30,11 @@ HTML through a `file://` URL so the JavaScript modules load correctly.
 - `index.html`: complete page content and inline SVG artwork.
 - `styles.css`: original published page styles.
 - `effects.css` and `effects.js`: badge suppression, scroll reveals, and hover effects.
+- `responsive.css` and `responsive.js`: responsive layout, logo marquee, and anchored illustrations.
 - `assets/`: local images, runtime modules, font files, and SHA-256 manifest.
 - `server.mjs`: dependency-free local web server.
 
-The reference uses a fixed 1440-pixel viewport, which is retained. This is a
+The desktop composition is retained at 1440px and above. Smaller screens use stacked sections, wrapping navigation, swipeable trip cards, and a single-column Plus grid on phones. The compatibility logos loop horizontally, pause on hover/focus, and stop for reduced-motion users. The final illustrations are anchored inside the closing section. This is a
 reproduction of the supplied page; it preserves existing source behavior and
 does not introduce booking, account, payment, or other backend services.
 
