@@ -317,3 +317,33 @@
   .framer-3xerR .framer-1tbaalt { height: 1482px !important; }
   .framer-3xerR .framer-4t9ga2 { height: 1877px !important; }
 }
+/* Let the closing headline set its own height instead of covering its button. */
+.framer-3xerR .framer-1reffdh {
+  height: auto !important;
+  min-height: 802px;
+  padding: 100px clamp(24px, 6vw, 90px) !important;
+}
+.framer-3xerR .framer-n8ck9f {
+  position: relative !important; inset: auto !important; transform: none !important;
+  width: min(100%, 926px) !important; height: auto !important;
+  margin-inline: auto; gap: 40px !important;
+}
+.framer-3xerR .framer-14ethwb {
+  width: 100% !important; height: auto !important; min-height: 0 !important;
+  display: block !important;
+}
+.framer-3xerR .framer-1wysf4k {
+  position: relative !important; inset: auto !important; width: 100% !important; height: auto !important;
+}
+.framer-3xerR .framer-19sbuvg {
+  width: min(100%, 430px) !important; height: auto !important; overflow: hidden !important;
+}
+.framer-3xerR .framer-1lmcxft {
+  position: relative !important; inset: auto !important; transform: none !important;
+  width: 100% !important; height: auto !important; padding: 20px 24px !important;
+}
+.framer-3xerR .framer-e34p5r { display: none !important; }
+.framer-3xerR .framer-1j24kbx { width: 100% !important; }
+@media (max-width: 1439px) {
+  .framer-3xerR .framer-1reffdh { min-height: 0 !important; }
+}
