@@ -1,0 +1,10 @@
+{
+  "name": "sailties-reference",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HTML and CSS version of the supplied SailTies reference",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs"
+  }
+}

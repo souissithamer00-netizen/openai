@@ -1,0 +1,46 @@
+# SailTies
+
+A locally hosted HTML/CSS version of the supplied reference:
+https://thistle-areas-170179.framer.app/
+
+The published page's layout, text, colors, spacing, SVG artwork, images, and
+interactive components are preserved. All 130 required asset files are included
+locally. Framer analytics and its author-only editing toolbar are excluded.
+
+## Run
+
+Requires Node.js 18 or newer. No packages to install and no build step.
+
+```sh
+npm start
+```
+
+The server listens on port 3000 on all interfaces. To use another port:
+
+```sh
+npm run dev -- --port 8080
+```
+
+You can also upload the HTML, CSS, and `assets` directory to a static web host.
+Keep the directory structure intact. Use a web server rather than opening the
+HTML through a `file://` URL so the JavaScript modules load correctly.
+
+## Files
+
+- `index.html`: complete page content and inline SVG artwork.
+- `styles.css`: original published page styles.
+- `assets/`: local images, runtime modules, font files, and SHA-256 manifest.
+- `server.mjs`: dependency-free local web server.
+
+The reference uses a fixed 1440-pixel viewport, which is retained. This is a
+reproduction of the supplied page; it preserves existing source behavior and
+does not introduce booking, account, payment, or other backend services.
+
+## Validation
+
+Checked in Chromium at desktop and mobile sizes, with external requests blocked.
+All 61 image elements load when requested, local resources return successfully,
+and the page has no JavaScript errors. Full-page desktop screenshot comparison
+against the reference matches over 99.9% of pixels (minor rendering/animation
+timing differences remain). The supplied reference itself has no web fonts
+registered at runtime, so its existing browser font fallback is retained.
