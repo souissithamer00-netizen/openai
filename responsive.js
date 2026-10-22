@@ -1,19 +1,4 @@
 (() => {
-  const fitHero = () => {
-    const hero = document.querySelector('.framer-1lh8rgf');
-    const content = document.querySelector('.framer-cwhqqe');
-    const text = document.querySelector('.framer-1ulg27c');
-    const phone = document.querySelector('.framer-wumhom');
-    if (!hero || !content || !text || !phone) return;
-    hero.style.setProperty('--st-hero-fit', '1');
-    const column = getComputedStyle(content).flexDirection === 'column';
-    const gap = parseFloat(getComputedStyle(content).rowGap) || 0;
-    const natural = column ? text.getBoundingClientRect().height + phone.getBoundingClientRect().height : Math.max(text.getBoundingClientRect().height, phone.getBoundingClientRect().height);
-    const room = Math.max(1, content.clientHeight - (column ? gap : 0));
-    hero.style.setProperty('--st-hero-fit', String(Math.min(1, room / natural)));
-  };
-  let frame;
-  addEventListener('resize', () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(fitHero); }, { passive: true });
   const init = () => {
     document.querySelectorAll('#main [data-framer-component-type="RichTextContainer"]').forEach(element => {
       const sizes = [element, ...element.querySelectorAll('[style]')].map(node => parseFloat(node.style.getPropertyValue('--framer-font-size')) || 0);
@@ -38,8 +23,6 @@
       document.addEventListener('click', e => { if (!header.contains(e.target)) close(); });
       header.append(toggle);
     }
-    fitHero();
-    document.fonts.ready.then(fitHero);
     const track = document.querySelector('.framer-g5b68a');
     if (track && !track.parentElement.classList.contains('st-logo-window')) {
       const window = document.createElement('div');
