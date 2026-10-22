@@ -229,18 +229,13 @@
   .framer-3xerR .framer-kfknzn, .framer-3xerR .framer-1xl1t93 { width: 100% !important; max-width: 100% !important; }
 }
 
-/* Scale the complete normal-desktop composition, not individual hero pieces. */
-@media (min-width: 1440px) {
-  .framer-3xerR.framer-72rtr7 {
-    height: calc(12507px + var(--st-hero-extra, 0px)) !important;
-  }
-  .framer-3xerR .framer-1lh8rgf {
-    width: 1440px !important;
-    height: 927px !important;
-    transform: scale(var(--st-hero-scale, 1)) !important;
-    transform-origin: top left !important;
-  }
-  .framer-3xerR.framer-72rtr7 > div:not(.framer-1lh8rgf) {
-    translate: 0 var(--st-hero-extra, 0px);
+/* Large screens retain normal desktop sizes and outer padding. */
+@media (min-width: 1600px) {
+  .framer-3xerR .framer-cwhqqe {
+    width: calc(100% - 80px) !important;
+    max-width: none !important;
+    margin-inline: auto !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
   }
 }
