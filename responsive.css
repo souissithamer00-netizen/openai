@@ -229,13 +229,46 @@
   .framer-3xerR .framer-kfknzn, .framer-3xerR .framer-1xl1t93 { width: 100% !important; max-width: 100% !important; }
 }
 
-/* Large screens: change only the outer margins and space between columns. */
+/* Large displays: a centered, spacious hero !important; normal desktop stays unchanged. */
 @media (min-width: 1600px) {
   .framer-3xerR .framer-cwhqqe {
-    width: max(1357px, 80%) !important;
-    max-width: 2400px !important;
+    width: min(1440px, calc(100% - 240px)) !important;
     margin-inline: auto !important;
     justify-content: space-between !important;
-    gap: 0 !important;
+    gap: clamp(80px, 7vw, 160px) !important;
   }
+  .framer-3xerR .framer-1ulg27c {
+    width: 640px !important;
+    min-width: 0 !important;
+    flex: 0 1 640px !important;
+    height: auto !important;
+    align-self: center !important;
+    gap: 32px !important;
+  }
+  .framer-3xerR .framer-wumhom {
+    width: clamp(540px, 34vw, 640px) !important;
+    flex-shrink: 0 !important;
+  }
+  .framer-3xerR .framer-szxuak { height: auto !important; }
+  .framer-3xerR .framer-nv956p { width: 100% !important; height: auto !important; }
+  .framer-3xerR .framer-nv956p .framer-text,
+  .framer-3xerR .framer-nv956p .framer-text span {
+    font-size: clamp(64px, 3.7vw, 72px) !important;
+    line-height: 1.02 !important;
+  }
+  .framer-3xerR .framer-1cbxj9f { gap: 12px !important; align-items: center !important; }
+  .framer-3xerR .framer-oi6t0c { width: auto !important; }
+  .framer-3xerR .framer-oi6t0c .framer-text { white-space: nowrap !important; }
+  .framer-3xerR .framer-1yg884c { width: 100% !important; gap: 12px !important; }
+  .framer-3xerR .framer-ef8jy7,
+  .framer-3xerR .framer-f7skhu { flex: 1 1 0 !important; min-width: 0 !important; padding-inline: 18px !important; }
+  .framer-3xerR .framer-pq5qv0,
+  .framer-3xerR .framer-tcfgis { width: 100% !important; }
+  .framer-3xerR .framer-1yg884c .framer-text { font-size: 17px !important; }
+}
+@media (min-width: 1600px) {
+  .framer-3xerR .framer-zvl913, .framer-3xerR .framer-9j6nom {
+    width: auto !important; height: auto !important;
+  }
+  .framer-3xerR .framer-9j6nom .framer-text { white-space: nowrap !important; }
 }
