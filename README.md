@@ -5,7 +5,7 @@ https://thistle-areas-170179.framer.app/
 
 The published page's layout, text, colors, spacing, SVG artwork, images, and
 interactive components are preserved. All 130 required asset files are included
-locally. Framer analytics and its author-only editing toolbar are excluded.
+locally. Framer analytics, its author-only editing toolbar, and the Made in Framer badge are excluded. Subtle scroll reveals and teal hover effects are added, with reduced-motion support.
 
 ## Run
 
@@ -29,6 +29,7 @@ HTML through a `file://` URL so the JavaScript modules load correctly.
 
 - `index.html`: complete page content and inline SVG artwork.
 - `styles.css`: original published page styles.
+- `effects.css` and `effects.js`: badge suppression, scroll reveals, and hover effects.
 - `assets/`: local images, runtime modules, font files, and SHA-256 manifest.
 - `server.mjs`: dependency-free local web server.
 
@@ -40,7 +41,7 @@ does not introduce booking, account, payment, or other backend services.
 
 Checked in Chromium at desktop and mobile sizes, with external requests blocked.
 All 61 image elements load when requested, local resources return successfully,
-and the page has no JavaScript errors. Full-page desktop screenshot comparison
-against the reference matches over 99.9% of pixels (minor rendering/animation
+and the page has no JavaScript errors. Before the requested badge and motion changes, full-page desktop screenshot comparison
+against the reference matched over 99.9% of pixels (minor rendering/animation
 timing differences remain). The supplied reference itself has no web fonts
 registered at runtime, so its existing browser font fallback is retained.
