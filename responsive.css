@@ -250,11 +250,19 @@
 }
 .framer-3xerR .framer-wumhom { align-self: flex-end !important; margin-bottom: 0 !important; }
 @media (min-width: 1440px) {
-  .framer-3xerR .framer-cwhqqe { flex: 1 1 0 !important; min-height: 0 !important; }
+  .framer-3xerR .framer-cwhqqe {
+    flex: 1 1 0 !important; min-height: 0 !important;
+    display: grid !important;
+    grid-template-columns: 670px 687px;
+    justify-content: center !important;
+    column-gap: clamp(0px, calc((100vw - 1440px) * .15), 64px) !important;
+    max-width: 1421px !important;
+  }
   .framer-3xerR .framer-1ulg27c { align-self: center !important; }
   .framer-3xerR .framer-wumhom {
-    position: absolute !important; right: 0 !important; bottom: 0 !important;
+    position: relative !important; inset: auto !important;
     width: 687px !important; height: auto !important;
+    align-self: end !important;
   }
   .framer-3xerR.framer-72rtr7 { height: calc(12507px + max(927px, 100svh) - 927px) !important; }
   .framer-3xerR.framer-72rtr7 > div:not(.framer-1lh8rgf) { translate: 0 calc(max(927px, 100svh) - 927px); }
