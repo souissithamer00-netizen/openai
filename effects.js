@@ -33,6 +33,12 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('st-visible');
+          if (!motion.matches && typeof entry.target.animate === 'function') {
+            entry.target.animate(
+              [{ opacity: 0.25, translate: '0 16px' }, { opacity: 1, translate: '0 0' }],
+              { duration: 650, easing: 'cubic-bezier(.22, 1, .36, 1)' }
+            );
+          }
           observer.unobserve(entry.target);
         }
       });

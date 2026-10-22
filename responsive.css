@@ -264,8 +264,6 @@
     width: 687px !important; height: auto !important;
     align-self: end !important;
   }
-  .framer-3xerR.framer-72rtr7 { height: calc(12507px + max(927px, 100svh) - 927px) !important; }
-  .framer-3xerR.framer-72rtr7 > div:not(.framer-1lh8rgf) { translate: 0 calc(max(927px, 100svh) - 927px); }
 }
 @media (max-width: 1439px) {
   .framer-3xerR .framer-1lh8rgf { height: auto !important; min-height: 100svh !important; }
@@ -296,4 +294,26 @@
 }
 @media (min-width: 1440px) and (max-width: 1599px) {
   .framer-3xerR .framer-1lh8rgf { padding-inline: 40px !important; }
+}
+
+/* Every section participates in layout so the footer cannot be clipped by a
+   stale page height when the hero, viewport, or loaded fonts change. */
+.framer-3xerR.framer-72rtr7 {
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto !important;
+  min-height: 100vh;
+}
+.framer-3xerR.framer-72rtr7 > div {
+  position: relative !important;
+  inset: auto !important;
+  flex: none !important;
+  translate: none !important;
+}
+.framer-3xerR.framer-72rtr7 > .framer-1lh8rgf { order: -1; }
+@media (min-width: 1440px) {
+  /* These two exported frames originally got their height from top/bottom
+     offsets. Preserve that space now that sections are in normal flow. */
+  .framer-3xerR .framer-1tbaalt { height: 1482px !important; }
+  .framer-3xerR .framer-4t9ga2 { height: 1877px !important; }
 }
