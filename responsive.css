@@ -347,3 +347,13 @@
 @media (max-width: 1439px) {
   .framer-3xerR .framer-1reffdh { min-height: 0 !important; }
 }
+@media (max-width: 1439px) {
+  .framer-3xerR .framer-evwstc {
+    display: flex !important; flex-direction: column !important;
+    align-items: center !important; height: auto !important; gap: 16px !important;
+  }
+  .framer-3xerR .framer-evwstc > div {
+    position: relative !important; inset: auto !important; transform: none !important;
+    flex: none !important; width: auto !important; height: auto !important;
+  }
+}
